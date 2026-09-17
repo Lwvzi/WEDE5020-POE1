@@ -113,3 +113,14 @@ h3,
 .isection.alt {
   background-color: #f1ede4;
 }
+
+.isection .heading2 {
+  margin-bottom: 2.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
