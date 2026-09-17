@@ -11,18 +11,28 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome (icons only — pure CSS, no JavaScript required) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Umuntu Ngabantu Alliance | Empowering Communities</title>
   </head>
   <body>
     <!-- Header Section -->
     <header class="site-header">
       <nav class="nav">
+        <input type="checkbox" id="nav-toggle-input" class="nav-toggle-input" />
         <a href="index.html" class="logo"
           >Umuntu Ngabantu <span class="mbala">| Alliance</span>
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation menu">
-          &#9776;
-        </button>
+        <label
+          for="nav-toggle-input"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
         <ul class="nav-links">
           <li class="link-items">
             <a href="index.html" class="link">Home</a>
@@ -57,95 +67,149 @@
     <!-- ===================== OFFICE LOCATIONS ===================== -->
     <section class="isection">
       <div class="container">
-        <h2>Our offices</h2>
+        <h2 class="heading2">Our offices</h2>
         <div class="locations-grid">
           <div class="location-card">
-            <h3>Durban (Head Office) — KwaZulu-Natal</h3>
-            <p>22 Silverton Road, Musgrave, Durban, 4001</p>
-            <p>Tel: 031 555 0176</p>
-            <p>Email: durban@ubuntuhomesalliance.org.za</p>
+            <h3>Durban (Head Office) &mdash; KwaZulu-Natal</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 22 Silverton Road,
+              Musgrave, Durban, 4001
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 031 555 0176</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i> durban@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Johannesburg — Gauteng</h3>
-            <p>14 Jorissen Street, Braamfontein, Johannesburg, 2001</p>
-            <p>Tel: 011 555 0193</p>
-            <p>Email: johannesburg@ubuntuhomesalliance.org.za</p>
+            <h3>Johannesburg &mdash; Gauteng</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 14 Jorissen Street,
+              Braamfontein, Johannesburg, 2001
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 011 555 0193</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              johannesburg@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Cape Town — Western Cape</h3>
-            <p>58 Loop Street, Cape Town City Centre, Cape Town, 8001</p>
-            <p>Tel: 021 555 0158</p>
-            <p>Email: capetown@ubuntuhomesalliance.org.za</p>
+            <h3>Cape Town &mdash; Western Cape</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 58 Loop Street, Cape Town
+              City Centre, Cape Town, 8001
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 021 555 0158</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              capetown@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Gqeberha — Eastern Cape</h3>
-            <p>17 Cape Road, Mill Park, Gqeberha, 6001</p>
-            <p>Tel: 041 555 0164</p>
-            <p>Email: gqeberha@ubuntuhomesalliance.org.za</p>
+            <h3>Gqeberha &mdash; Eastern Cape</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 17 Cape Road, Mill Park,
+              Gqeberha, 6001
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 041 555 0164</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              gqeberha@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Bloemfontein — Free State</h3>
-            <p>9 Kellner Street, Westdene, Bloemfontein, 9301</p>
-            <p>Tel: 051 555 0142</p>
-            <p>Email: bloemfontein@ubuntuhomesalliance.org.za</p>
+            <h3>Bloemfontein &mdash; Free State</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 9 Kellner Street,
+              Westdene, Bloemfontein, 9301
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 051 555 0142</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              bloemfontein@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Polokwane — Limpopo</h3>
-            <p>33 Jorissen Street, Polokwane Central, Polokwane, 0699</p>
-            <p>Tel: 015 555 0187</p>
-            <p>Email: polokwane@ubuntuhomesalliance.org.za</p>
+            <h3>Polokwane &mdash; Limpopo</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 33 Jorissen Street,
+              Polokwane Central, Polokwane, 0699
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 015 555 0187</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              polokwane@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Mbombela — Mpumalanga</h3>
-            <p>6 Brown Street, Mbombela Central, Mbombela, 1200</p>
-            <p>Tel: 013 555 0129</p>
-            <p>Email: mbombela@ubuntuhomesalliance.org.za</p>
+            <h3>Mbombela &mdash; Mpumalanga</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 6 Brown Street, Mbombela
+              Central, Mbombela, 1200
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 013 555 0129</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              mbombela@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Kimberley — Northern Cape</h3>
-            <p>21 Du Toitspan Road, Kimberley Central, Kimberley, 8301</p>
-            <p>Tel: 053 555 0115</p>
-            <p>Email: kimberley@ubuntuhomesalliance.org.za</p>
+            <h3>Kimberley &mdash; Northern Cape</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 21 Du Toitspan Road,
+              Kimberley Central, Kimberley, 8301
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 053 555 0115</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              kimberley@umuntungabantu.org.za
+            </p>
           </div>
 
           <div class="location-card">
-            <h3>Mahikeng — North West</h3>
-            <p>11 Nelson Mandela Drive, Mahikeng Central, Mahikeng, 2745</p>
-            <p>Tel: 018 555 0171</p>
-            <p>Email: mahikeng@ubuntuhomesalliance.org.za</p>
+            <h3>Mahikeng &mdash; North West</h3>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 11 Nelson Mandela Drive,
+              Mahikeng Central, Mahikeng, 2745
+            </p>
+            <p><i class="fa-solid fa-phone"></i> 018 555 0171</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              mahikeng@umuntungabantu.org.za
+            </p>
           </div>
         </div>
 
         <!-- =================================================
            GENERAL CONTACT FORM
-           Shares the validation script with enquiry.html
-           via the data-validate attribute (see js/script.js).
+           No JavaScript: required/type="email" trigger the
+           browser's own built-in validation on submit, and
+           style.css styles :invalid/:valid states directly.
+           No backend either — this is a static student project,
+           so nothing is actually sent anywhere.
       ================================================= -->
         <div class="form-wrapper">
-          <div class="success-message">
-            Thanks for your message! We'll get back to you within two working
-            days.
-          </div>
+          <p class="form-note">
+            <i class="fa-solid fa-circle-info"></i> Fields marked required will
+            be checked by your browser when you press Send.
+          </p>
 
-          <form data-validate novalidate>
+          <form novalidate>
             <div class="form-group">
               <label for="contact-name">Full name</label>
               <input
                 type="text"
                 id="contact-name"
                 name="contact-name"
+                placeholder=" "
                 required
               />
-              <span class="error-message" id="contact-name-error"
-                >Please enter your name.</span
-              >
             </div>
 
             <div class="form-group">
@@ -154,11 +218,9 @@
                 type="email"
                 id="contact-email"
                 name="contact-email"
+                placeholder=" "
                 required
               />
-              <span class="error-message" id="contact-email-error"
-                >Please enter a valid email address.</span
-              >
             </div>
 
             <div class="form-group">
@@ -166,14 +228,14 @@
               <textarea
                 id="contact-message"
                 name="contact-message"
+                placeholder=" "
                 required
               ></textarea>
-              <span class="error-message" id="contact-message-error"
-                >Please enter a message.</span
-              >
             </div>
 
-            <button type="submit" class="btn">Send message</button>
+            <button type="submit" class="btn">
+              <i class="fa-solid fa-paper-plane"></i> Send message
+            </button>
           </form>
         </div>
       </div>
@@ -191,6 +253,17 @@
           <a href="contact.html"><span class="mbala">Contact us</span></a>
           &middot; <a href="enquiry.html">Get involved</a>
         </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
