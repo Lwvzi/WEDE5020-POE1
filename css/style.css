@@ -57,7 +57,6 @@ ul {
   padding: 0;
 }
 
-/* ---------- 2. BASE / TYPOGRAPHY ---------- */
 h1,
 h2,
 h3,
@@ -96,7 +95,7 @@ h3,
   font-weight: 600;
 }
 
-/* ---------- 3. LAYOUT HELPERS ---------- */
+/* Layout*/
 .container {
   width: min(1160px, 92%);
   margin-inline: auto;
@@ -125,7 +124,7 @@ h3,
   margin-top: 2.5rem;
 }
 
-/* ---------- 4. HEADER & NAVIGATION ---------- */
+/* Header Section */
 .site-header {
   position: sticky;
   top: 0;
@@ -202,4 +201,42 @@ h3,
   height: 2px;
   background-color: var(--color-accent);
   border-radius: 2px;
+}
+
+/* Hero Styling */
+.home,
+.about,
+.contact,
+.enquiry,
+.orphanages {
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.home {
+  max-width: 760px;
+  padding-top: 4.5rem;
+}
+
+.home .heading1,
+.about .heading1,
+.contact .heading1,
+.enquiry .heading1,
+.orphanages .heading1 {
+  text-align: center;
+}
+
+.home .para,
+.about .para,
+.contact .para,
+.enquiry .para,
+.orphanages .para {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home .btn {
+  margin-top: 1.5rem;
 }
