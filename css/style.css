@@ -124,3 +124,31 @@ h3,
   gap: 1.75rem;
   margin-top: 2.5rem;
 }
+
+/* ---------- 4. HEADER & NAVIGATION ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1160px, 92%);
+  margin-inline: auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  order: 1;
+}
