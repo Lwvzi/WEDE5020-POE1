@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Fonts: Quicksand for headings, Poppins for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    
+
     <link src="..//css/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-     <!-- Font Awesome (icons only — pure CSS, no JavaScript required) -->
+    <!-- Font Awesome (icons only — pure CSS, no JavaScript required) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -25,7 +25,7 @@
         <a href="index.html" class="logo"
           >Umuntu Ngabantu <span class="mbala">| Alliance</span>
         </a>
-         <label
+        <label
           for="nav-toggle-input"
           class="nav-toggle"
           aria-label="Toggle navigation menu"
@@ -76,47 +76,27 @@
 
     <section class="isection">
       <div class="container">
-        <!-- FILTER Controls: Read live by js/app.js - no page reload needed. -->
-
-        <div class="filters">
-          <input
-            type="text"
-            id="directorySearch"
-            placeholder="Search Orphanages"
-          />
-          <select id="provinceFilter">
-            <option value="">All Provinces</option>
-            <option value="Eastern Cape">Eastern Cape</option>
-            <option value="Free State">Free State</option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-            <option value="North West">North West</option>
-            <option value="Northern Cape">Northern Cape</option>
-            <option value="Western Cape">Western Cape</option>
-          </select>
-
-          <select id="need-filter">
-            <option value="all">All current needs</option>
-            <option value="food">Food</option>
-            <option value="school-fees">School fees &amp; Uniforms</option>
-            <option value="beds">Beds &amp; Bedding</option>
-            <option value="general">General funding</option>
-          </select>
-        </div>
+        <!-- Note: this directory is a static list. A searchable / filterable
+             version (by province, by current need) needs JavaScript to run
+             client-side without reloading the page, which is out of scope
+             for this CSS-only assessment — it can be added back later. -->
 
         <div id="orphanageDirectory" class="grid-3">
-          <!-- Orphanage cards will be dynamically inserted here by js/app.js -->
+          <!-- FILLER IMAGES throughout: swap the src for each card's real photo. -->
+
           <!-- GAUTENG -->
-          <div
-            class="listing-card"
-            data-name="Sizanani Children's Home"
-            data-province="gauteng"
-            data-need="general"
-          >
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/sizani.jpeg"
+              alt="Sizanani Children's Home"
+              loading="lazy"
+            />
             <h3 class="heading3">Sizanani Children's Home</h3>
-            <p class="meta">Bronkhorstspruit &middot; Gauteng</p>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Bronkhorstspruit &middot;
+              Gauteng
+            </p>
             <span class="tag">General funding</span
             ><span class="tag">Special Needs Care</span>
             <p>
@@ -125,14 +105,18 @@
             </p>
           </div>
           <!-- KWAZULU-NATAL -->
-          <div
-            class="listing-card"
-            data-name="iThemba Lethu Home"
-            data-province="kwazulu-natal"
-            data-need="food"
-          >
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/Itemba Lethu.PNG"
+              alt="iThemba Lethu Home"
+              loading="lazy"
+            />
             <h3 class="heading3">iThemba Lethu Home</h3>
-            <p class="meta">Durban &middot; KwaZulu-Natal</p>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Durban &middot;
+              KwaZulu-Natal
+            </p>
             <span class="tag">Food</span><span class="tag">Infant Care</span>
             <p>
               Cares for abandoned and vulnerable babies, focusing on nutrition
@@ -140,123 +124,150 @@
             </p>
           </div>
           <!-- EASTERN CAPE -->
-        <div
-          class="listing-card"
-          data-name="Khaya Likhanya Child and Youth Care"
-          data-province="eastern-cape"
-          data-need="school-fees"
-        >
-          <h3>Khaya Likhanya Child and Youth Care</h3>
-          <p class="meta">Komani &middot; Eastern Cape</p>
-          <span class="tag">School fees</span
-          ><span class="tag">30+ children</span>
-          <p>
-            Providing dynamic community support alongside residential care while
-            raising funds for school uniforms and educational fees.
-          </p>
-        </div>
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/khayaLikhanya.jpeg"
+              alt="Khaya Likhanya Child and Youth Care"
+              loading="lazy"
+            />
+            <h3>Khaya Likhanya Child and Youth Care</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Komani &middot; Eastern
+              Cape
+            </p>
+            <span class="tag">School fees</span
+            ><span class="tag">30+ children</span>
+            <p>
+              Providing dynamic community support alongside residential care
+              while raising funds for school uniforms and educational fees.
+            </p>
+          </div>
 
-        <!-- FREE STATE -->
-        <div
-          class="listing-card"
-          data-name="Tswellang Special School Hostel"
-          data-province="free-state"
-          data-need="beds"
-        >
-          <h3>Tswellang Special School Hostel</h3>
-          <p class="meta">Bloemfontein &middot; Free State</p>
-          <span class="tag">Beds &amp; bedding</span
-          ><span class="tag">Disabled Youth</span>
-          <p>
-            Residential facility for learners with physical disabilities needing
-            regular replacements for specialized bedding arrangements.
-          </p>
-        </div>
+          <!-- FREE STATE -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/tswellang.jpeg"
+              alt="Tswellang Special School Hostel"
+              loading="lazy"
+            />
+            <h3>Tswellang Special School Hostel</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Bloemfontein &middot;
+              Free State
+            </p>
+            <span class="tag">Beds &amp; bedding</span
+            ><span class="tag">Disabled Youth</span>
+            <p>
+              Residential facility for learners with physical disabilities
+              needing regular replacements for specialized bedding arrangements.
+            </p>
+          </div>
 
-        <!-- LIMPOPO -->
-        <div
-          class="listing-card"
-          data-name="Polokwane Child and Family Welfare"
-          data-province="limpopo"
-          data-need="food"
-        >
-          <h3>Polokwane Child and Family Welfare</h3>
-          <p class="meta">Polokwane &middot; Limpopo</p>
-          <span class="tag">Food</span><span class="tag">Community Care</span>
-          <p>
-            Managing protective temporary placement options alongside food
-            relief distribution for children in emergency environments.
-          </p>
-        </div>
+          <!-- LIMPOPO -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/polokwane.jpeg"
+              alt="Polokwane Child and Family Welfare"
+              loading="lazy"
+            />
+            <h3>Polokwane Child and Family Welfare</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Polokwane &middot;
+              Limpopo
+            </p>
+            <span class="tag">Food</span><span class="tag">Community Care</span>
+            <p>
+              Managing protective temporary placement options alongside food
+              relief distribution for children in emergency environments.
+            </p>
+          </div>
 
-        <!-- MPUMALANGA -->
-        <div
-          class="listing-card"
-          data-name="Moreson Child and Youth Care Centre"
-          data-province="mpumalanga"
-          data-need="general"
-        >
-          <h3>Moreson Child and Youth Care Centre</h3>
-          <p class="meta">Mbombela &middot; Mpumalanga</p>
-          <span class="tag">General funding</span
-          ><span class="tag">Therapeutic Support</span>
-          <p>
-            Securing holistic operational costs to deliver therapeutic
-            programming for traumatized or neglected minors.
-          </p>
-        </div>
+          <!-- MPUMALANGA -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/moreson.jpeg"
+              alt="Moreson Child and Youth Care Centre"
+              loading="lazy"
+            />
+            <h3>Moreson Child and Youth Care Centre</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Mbombela &middot;
+              Mpumalanga
+            </p>
+            <span class="tag">General funding</span
+            ><span class="tag">Therapeutic Support</span>
+            <p>
+              Securing holistic operational costs to deliver therapeutic
+              programming for traumatized or neglected minors.
+            </p>
+          </div>
 
-        <!-- NORTH WEST -->
-        <div
-          class="listing-card"
-          data-name="Rustenburg Child Welfare"
-          data-province="north-west"
-          data-need="school-fees"
-        >
-          <h3>Rustenburg Child Welfare</h3>
-          <p class="meta">Rustenburg &middot; North West</p>
-          <span class="tag">School fees</span
-          ><span class="tag">Early Childhood</span>
-          <p>
-            Expanding literacy resources and early child development center
-            funding paths for vulnerable mining community youngsters.
-          </p>
-        </div>
+          <!-- NORTH WEST -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/rusternburg.jpeg"
+              alt="Rustenburg Child Welfare"
+              loading="lazy"
+            />
+            <h3>Rustenburg Child Welfare</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Rustenburg &middot; North
+              West
+            </p>
+            <span class="tag">School fees</span
+            ><span class="tag">Early Childhood</span>
+            <p>
+              Expanding literacy resources and early child development center
+              funding paths for vulnerable mining community youngsters.
+            </p>
+          </div>
 
-        <!-- NORTHERN CAPE -->
-        <div
-          class="listing-card"
-          data-name="Helen Bishop Home"
-          data-province="northern-cape"
-          data-need="beds"
-        >
-          <h3>Helen Bishop Home</h3>
-          <p class="meta">Kimberley &middot; Northern Cape</p>
-          <span class="tag">Beds &amp; bedding</span
-          ><span class="tag">Medical Care</span>
-          <p>
-            Specialist medical recovery home looking to refresh orthopaedic
-            frames and safe bedding configurations for disabled kids.
-          </p>
-        </div>
+          <!-- NORTHERN CAPE -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/sthombe.jpg"
+              alt="Helen Bishop Home"
+              loading="lazy"
+            />
+            <h3>Helen Bishop Home</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Kimberley &middot;
+              Northern Cape
+            </p>
+            <span class="tag">Beds &amp; bedding</span
+            ><span class="tag">Medical Care</span>
+            <p>
+              Specialist medical recovery home looking to refresh orthopaedic
+              frames and safe bedding configurations for disabled kids.
+            </p>
+          </div>
 
-        <!-- WESTERN CAPE -->
-        <div
-          class="listing-card"
-          data-name="Christine Revell Children's Home"
-          data-province="western-cape"
-          data-need="general"
-        >
-          <h3>Christine Revell Children's Home</h3>
-          <p class="meta">Athlone &middot; Western Cape</p>
-          <span class="tag">General funding</span
-          ><span class="tag">0-5 Years Care</span>
-          <p>
-            Provides round-the-clock loving care for emotional and physical
-            healing of abandoned infants and toddlers up to age five.
-          </p>
-        </div>
-      </div>
+          <!-- WESTERN CAPE -->
+          <div class="listing-card">
+            <img
+              class="listing-img"
+              src="../media/Christine children home.PNG"
+              alt="Christine Revell Children's Home"
+              loading="lazy"
+            />
+            <h3>Christine Revell Children's Home</h3>
+            <p class="meta">
+              <i class="fa-solid fa-location-dot"></i> Athlone &middot; Western
+              Cape
+            </p>
+            <span class="tag">General funding</span
+            ><span class="tag">0-5 Years Care</span>
+            <p>
+              Provides round-the-clock loving care for emotional and physical
+              healing of abandoned infants and toddlers up to age five.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -273,6 +284,17 @@
           <a href="contact.html"><span class="mbala">Contact us</span></a>
           &middot; <a href="enquiry.html">Get involved</a>
         </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
