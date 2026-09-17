@@ -152,3 +152,54 @@ h3,
   color: var(--color-navy);
   order: 1;
 }
+
+.nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle {
+  display: none;
+  order: 2;
+  font-size: 1.4rem;
+  color: var(--color-navy);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.4rem;
+}
+
+.nav-links {
+  order: 3;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link-items .link {
+  font-weight: 500;
+  color: var(--color-navy);
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color var(--transition);
+}
+
+.link-items .link:hover,
+.link-items .link:focus-visible {
+  color: var(--color-accent);
+}
+
+.link-items .link.active {
+  color: var(--color-accent);
+}
+
+.link-items .link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
