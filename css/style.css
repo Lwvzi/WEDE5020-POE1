@@ -89,3 +89,27 @@ h3,
   color: var(--color-text-muted);
   max-width: 70ch;
 }
+
+/* Accent span used throughout the copy, e.g. <span class="mbala"> */
+.mbala {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ---------- 3. LAYOUT HELPERS ---------- */
+.container {
+  width: min(1160px, 92%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.isection {
+  padding: 4.5rem 1.5rem;
+}
+
+.isection.alt {
+  background-color: #f1ede4;
+}
