@@ -240,3 +240,30 @@ h3,
 .home .btn {
   margin-top: 1.5rem;
 }
+
+/* Button Styling */
+btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
