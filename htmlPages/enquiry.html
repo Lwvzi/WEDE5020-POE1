@@ -11,18 +11,28 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome (icons only — pure CSS, no JavaScript required) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Umuntu Ngabantu Alliance | Empowering Communities</title>
   </head>
   <body>
     <!-- Header Section -->
     <header class="site-header">
       <nav class="nav">
+        <input type="checkbox" id="nav-toggle-input" class="nav-toggle-input" />
         <a href="index.html" class="logo"
           >Umuntu Ngabantu <span class="mbala">| Alliance</span>
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation menu">
-          &#9776;
-        </button>
+        <label
+          for="nav-toggle-input"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
         <ul class="nav-links">
           <li class="link-items">
             <a href="index.html" class="link" c>Home</a>
@@ -58,17 +68,20 @@
           <!-- Hidden by default; js/script.js reveals this once every
              required field passes validation. No backend — this is
              a static student project, so nothing is actually sent. -->
-          <div class="success-message">
-            Thank you! Someone from Ubuntu Homes Alliance will be in touch
-            shortly.
-          </div>
-          <form data-validate novalidate>
+          <p class="form-note">
+            <i class="fa-solid fa-circle-info"></i> Fields marked required will
+            be checked by your browser when you press Submit.
+          </p>
+          <form novalidate>
             <div class="form-group">
               <label for="full-name">Your full name</label>
-              <input type="text" id="full-name" name="full-name" required />
-              <span class="error-message" id="full-name-error"
-                >Please enter your name.</span
-              >
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder=" "
+                required
+              />
             </div>
             <div class="form-group">
               <label for="involvement-type">How would you like to help?</label>
@@ -102,16 +115,21 @@
             </div>
             <div class="form-group">
               <label for="email">Email address</label>
-              <input type="email" id="email" name="email" required />
-              <span class="error-message" id="email-error"
-                >Please enter a valid email address.</span
-              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder=" "
+                required
+              />
             </div>
             <div class="form-group">
               <label for="message">Tell us a bit more</label>
               <textarea id="message" name="message"></textarea>
             </div>
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn">
+              <i class="fa-solid fa-paper-plane"></i> Submit
+            </button>
           </form>
         </div>
       </div>
@@ -129,6 +147,17 @@
           <a href="contact.html"><span class="mbala">Contact us</span></a>
           &middot; <a href="enquiry.html">Get involved</a>
         </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
