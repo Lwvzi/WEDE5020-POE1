@@ -24,6 +24,11 @@
   --transition: 0.25s ease;
 }
 
+::selection {
+  background-color: var(--color-accent); /* The highlight background color */
+  color: var(--color-navy); /* The text color when highlighted */
+}
+
 * {
   box-sizing: border-box;
 }
