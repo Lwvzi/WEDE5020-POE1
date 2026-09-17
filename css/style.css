@@ -247,7 +247,7 @@ h3,
 }
 
 /* Button Styling */
-btn {
+.btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
