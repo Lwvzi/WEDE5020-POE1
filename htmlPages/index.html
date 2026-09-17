@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Fonts: Quicksand for headings, Poppins for body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link src="..//css/style.css" rel="stylesheet" />
+    <!-- Font Awesome (icons only — pure CSS, no JavaScript required) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -18,9 +25,13 @@
         <a href="index.html" class="logo"
           >Umuntu Ngabantu <span class="mbala">| Alliance</span>
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation menu">
-          &#9776;
-        </button>
+        <label
+          for="nav-toggle-input"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
         <ul class="nav-links">
           <li class="link-items">
             <a href="index.html" class="link" class="active">Home</a>
@@ -60,7 +71,7 @@
     <section class="isection">
       <div class="container">
         <h2 class="heading2">The Reason We Do What We Do.</h2>
-        <p class="para">
+        <p class="para" style="margin-inline: auto; text-align: center">
           South Africa has approximately has over 2.7 million children that are
           orphaned and in need of major support.
           <span class="mbala">Umuntu Ngabantu Alliance</span> is committed to
@@ -70,6 +81,7 @@
 
         <div class="grid-3">
           <div class="card">
+            <i class="fa-solid fa-bullseye"></i>
             <h3 class="heading3">Our Mission</h3>
             <p class="para">
               To connect potential donors and volunteers with orphanages across
@@ -77,6 +89,7 @@
             </p>
           </div>
           <div class="card">
+            <i class="fa-solid fa-eye"></i>
             <h3 class="heading3">Our Vision</h3>
             <p class="para">
               To create a world where every orphaned child has access to the
@@ -84,6 +97,7 @@
             </p>
           </div>
           <div class="card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
             <h3 class="heading3">Our Values</h3>
             <p class="para">
               Compassion, Integrity, Collaboration, Empowerment, and
@@ -91,6 +105,7 @@
             </p>
           </div>
           <div class="card">
+            <i class="fa-solid fa-children"></i>
             <h3 class="heading3">2.7 million</h3>
             <p class="para">
               The number of orphaned children in South Africa who are in need of
@@ -98,6 +113,7 @@
             </p>
           </div>
           <div class="card">
+            <i class="fa-solid fa-map-location-dot"></i>
             <h3 class="heading3">Highest Rates</h3>
             <p class="para">
               Kwa-Zulu Natal, the Eastern Cape, and the Free State have the
@@ -105,6 +121,7 @@
             </p>
           </div>
           <div class="card">
+            <i class="fa-solid fa-coins"></i>
             <h3 class="heading3">Funding not Space</h3>
             <p class="para">
               The main challenge facing orphanages in South Africa is the lack
@@ -115,6 +132,68 @@
         </div>
       </div>
     </section>
+    <!-- This will be an Owl-Carousel once we start using JavaScript. -->
+    <section class="isection alt">
+      <div class="container">
+        <h2 class="heading2">Orphanages Currently In Urgent Need</h2>
+        <div class="grid-3">
+          <div class="card">
+            <!-- FILLER IMAGE: replace with a real photo of Sizanani Children's Home -->
+            <img
+              src="https://placehold.co/500x300/22375a/ffffff?text=Sizanani+Children%27s+Home"
+              alt="Sizanani Children's Home"
+              style="
+                margin: -1.75rem -1.75rem 1rem;
+                width: calc(100% + 3.5rem);
+                border-radius: 12px 12px 0 0;
+              "
+            />
+            <h3 class="heading3">Sizanani Children's Home</h3>
+            <p class="para">
+              Bronkhorstspruit, Gauteng &mdash; general funding &amp; special
+              needs care.
+            </p>
+          </div>
+          <div class="card">
+            <!-- FILLER IMAGE: replace with a real photo of iThemba Lethu Home -->
+            <img
+              src="https://placehold.co/500x300/22375a/ffffff?text=iThemba+Lethu+Home"
+              alt="iThemba Lethu Home"
+              style="
+                margin: -1.75rem -1.75rem 1rem;
+                width: calc(100% + 3.5rem);
+                border-radius: 12px 12px 0 0;
+              "
+            />
+            <h3 class="heading3">iThemba Lethu Home</h3>
+            <p class="para">
+              Durban, KwaZulu-Natal &mdash; food &amp; infant care.
+            </p>
+          </div>
+          <div class="card">
+            <!-- FILLER IMAGE: replace with a real photo of Khaya Likhanya -->
+            <img
+              src="https://placehold.co/500x300/22375a/ffffff?text=Khaya+Likhanya"
+              alt="Khaya Likhanya Child and Youth Care"
+              style="
+                margin: -1.75rem -1.75rem 1rem;
+                width: calc(100% + 3.5rem);
+                border-radius: 12px 12px 0 0;
+              "
+            />
+            <h3 class="heading3">Khaya Likhanya Child and Youth Care</h3>
+            <p class="para">
+              Komani, Eastern Cape &mdash; school fees for 30+ children.
+            </p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem">
+          <a href="orphanages.html" class="btn"
+            ><i class="fa-solid fa-list"></i> View All Orphanages</a
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- How It Works -->
     <section class="isection atl">
@@ -122,7 +201,7 @@
         <h2 class="heading2">
           How Umuntu Ngabantu <span class="mbala">Alliance</span> Works
         </h2>
-        <p class="para">
+        <p class="para" style="margin-inline: auto; text-align: center">
           Umuntu Ngabantu <span class="mbala">Alliance</span> works by
           connecting potential donors and volunteers with orphanages across
           South Africa that are in need of support. We facilitate this
@@ -144,6 +223,17 @@
           <a href="contact.html"><span class="mbala">Contact us</span></a>
           &middot; <a href="enquiry.html">Get involved</a>
         </p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="X (Twitter)"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
       </div>
     </footer>
   </body>
