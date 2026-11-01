@@ -592,3 +592,409 @@ h3,
     padding: 3rem 1rem;
   }
 }
+
+/* ==========================================================================
+   JAVASCRIPT ENHANCEMENTS  (styles used by js/script.js)
+   ========================================================================== */
+
+/* Makes the HTML "hidden" attribute always win over display rules */
+[hidden] {
+  display: none !important;
+}
+
+/* Keyboard focus ring for the controls the script adds */
+.nav-toggle:focus-visible,
+.back-to-top:focus-visible,
+.carousel-btn:focus-visible,
+.carousel-dot:focus-visible,
+.carousel-toggle:focus-visible,
+.btn-outline:focus-visible {
+  outline: 3px solid rgba(227, 92, 62, 0.55);
+  outline-offset: 3px;
+}
+
+/* ---------- Secondary / outline button ---------- */
+.btn.btn-outline {
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus-visible {
+  background-color: var(--color-navy);
+  color: #fff;
+}
+
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn[disabled]:hover {
+  transform: none;
+}
+
+/* ---------- Form validation ---------- */
+.required-mark {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  scroll-margin-top: 7rem; /* keeps the field clear of the sticky header */
+}
+
+/* Error text is hidden until the script finds a problem */
+.error-message {
+  display: none;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #c62828;
+}
+
+.has-error .error-message {
+  display: block;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: #d33 !important; /* beats the :valid green rule above */
+  box-shadow: 0 0 0 3px rgba(221, 51, 51, 0.12);
+}
+
+.form-group.is-valid input,
+.form-group.is-valid select,
+.form-group.is-valid textarea {
+  border-color: #2f7d4f;
+}
+
+/* Thank-you message that replaces a form after a successful submit */
+.form-success {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+.form-success:focus {
+  outline: none;
+}
+
+.form-success > i {
+  font-size: 3rem;
+  color: #2f7d4f;
+  margin-bottom: 0.75rem;
+}
+
+.form-success .heading3 {
+  font-size: 1.5rem;
+}
+
+.form-success p {
+  color: var(--color-text-muted);
+  margin: 0 auto 1.25rem;
+  max-width: 46ch;
+}
+
+.form-success .btn {
+  margin: 0.25rem;
+}
+
+.form-success .form-success-note {
+  font-size: 0.8rem;
+  margin: 1.25rem auto 0;
+}
+
+/* ---------- Orphanage directory: search + filters ---------- */
+.directory-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--color-navy);
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: #fff;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(227, 91, 62, 0.15);
+}
+
+.directory-filters .btn {
+  padding: 0.75rem 1.25rem;
+  justify-content: center;
+}
+
+.directory-status {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.js #orphanageDirectory {
+  margin-top: 1.25rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 1.75rem;
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.no-results > i {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.no-results .para {
+  margin: 0 auto 1.25rem;
+}
+
+/* ---------- Urgent-needs carousel ---------- */
+.carousel {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  touch-action: pan-y; /* up/down still scrolls the page; sideways = swipe */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(100% / var(--per-view, 1));
+  padding: 0.5rem 0.625rem 1.25rem;
+}
+
+.carousel-slide .card {
+  height: 100%;
+}
+
+.carousel-slide .card img {
+  height: 210px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel.is-static .carousel-controls {
+  display: none;
+}
+
+.carousel-btn,
+.carousel-toggle {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  color: var(--color-navy);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.carousel-btn:hover,
+.carousel-toggle:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.15rem;
+}
+
+/* 24px tap target containing a 12px visible dot */
+.carousel-dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-dot::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background-color: #cfc8ba;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.carousel-dot.active::before {
+  background-color: var(--color-accent);
+  transform: scale(1.25);
+}
+
+/* ---------- Back-to-top button ---------- */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 90;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-navy);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition),
+    visibility var(--transition),
+    background-color var(--transition);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-accent);
+}
+
+/* ---------- Reveal on scroll (only active when JavaScript is running) ---------- */
+.js .reveal {
+  opacity: 0;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  animation: reveal-up 0.6s ease backwards;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsive + accessibility for the additions above ---------- */
+@media (max-width: 900px) {
+  .directory-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .directory-filters {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .carousel-slide .card img {
+    height: 190px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track,
+  .back-to-top {
+    transition: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+  }
+
+  .js .reveal.is-visible {
+    animation: none;
+  }
+}
+
+@media print {
+  .back-to-top,
+  .carousel-controls,
+  .directory-filters {
+    display: none;
+  }
+
+  .js .reveal {
+    opacity: 1;
+  }
+}

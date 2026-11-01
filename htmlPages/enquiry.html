@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="../js/script.js" defer></script>
     <title>Umuntu Ngabantu Alliance | Empowering Communities</title>
   </head>
   <body>
@@ -65,12 +66,13 @@
     <section class="isection">
       <div class="container">
         <div class="form-wrapper">
-          <!-- Hidden by default; js/script.js reveals this once every
-             required field passes validation. No backend — this is
-             a static student project, so nothing is actually sent. -->
+          <!-- js/script.js checks the fields below (the form has novalidate, so the
+             browser's own pop-ups are off) and swaps the form for a thank-you
+             message once every required field passes. No backend — this is a
+             static student project, so nothing is actually sent. -->
           <p class="form-note">
-            <i class="fa-solid fa-circle-info"></i> Fields marked required will
-            be checked by your browser when you press Submit.
+            <i class="fa-solid fa-circle-info"></i> Fields marked
+            <span class="required-mark">*</span> are required.
           </p>
           <form novalidate>
             <div class="form-group">

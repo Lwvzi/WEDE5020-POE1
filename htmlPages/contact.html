@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="../js/script.js" defer></script>
     <title>Umuntu Ngabantu Alliance | Empowering Communities</title>
   </head>
   <body>
@@ -188,16 +189,15 @@
 
         <!-- =================================================
            GENERAL CONTACT FORM
-           No JavaScript: required/type="email" trigger the
-           browser's own built-in validation on submit, and
-           style.css styles :invalid/:valid states directly.
-           No backend either — this is a static student project,
+           Validated by js/script.js (the form has novalidate, so the
+           browser's own pop-ups are off).
+           No backend — this is a static student project,
            so nothing is actually sent anywhere.
       ================================================= -->
         <div class="form-wrapper">
           <p class="form-note">
-            <i class="fa-solid fa-circle-info"></i> Fields marked required will
-            be checked by your browser when you press Send.
+            <i class="fa-solid fa-circle-info"></i> Fields marked
+            <span class="required-mark">*</span> are required.
           </p>
 
           <form novalidate>
