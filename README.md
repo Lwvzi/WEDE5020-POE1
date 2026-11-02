@@ -77,14 +77,22 @@ Font Awesome 6.5.2: Vector icons for UI elements and location indicators.
 📂 Directory Structure
 
 ├── index.html              # Home page with carousel
+
 ├── about.html              # About Us page
+
 ├── orphanages.html         # Interactive directory page
+
 ├── enquiry.html            # "Lend A Hand" form page
+
 ├── contact.html            # Office locations & general contact form
+
 ├── robots.txt              # Search engine crawler instructions
+
+
 ├── sitemap.xml             # Site architecture map for search engines
 ├── css/
 │   └── style.css           # Global stylesheet and UI enhancements
+
 ├── js/
 │   └── script.js           # Core interactive JavaScript features
 └── media/                  # Project images and assets
