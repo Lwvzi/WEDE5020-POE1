@@ -1,0 +1,6 @@
+# Allow all standard search engine crawlers
+User-agent: *
+Allow: /
+
+# Direct search engine crawlers to your sitemap
+Sitemap: https://www.umuntungabantu.org.za/sitemap.xml
